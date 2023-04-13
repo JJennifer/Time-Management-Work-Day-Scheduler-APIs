@@ -2,10 +2,10 @@ var currentDate = document.getElementById("#currentDay");
 var date = dayjs().format("MMMM D, YYYY h:mm A");
 
 console.log(date)
-
+// This is the day and time displayed at the top of the screen
 $("#currentDay").text(date);
 
-let save = document.querySelectorAll(".saveBtn")
+var save = document.querySelectorAll(".saveBtn");
 
 
   $(save).on("click", function() {
@@ -13,15 +13,24 @@ let save = document.querySelectorAll(".saveBtn")
     var entryTime = $(this).parent().attr("id");
     var entry = $(this).siblings(".description").val();
   
-  // In the local storage the negative numbers are considered am times while positive numbers are pm times
+  
   localStorage.setItem(entryTime,JSON.stringify(entry));
-  save.value = localStorage.getItem("entry");
+
+  // This loop should allow us to save the textareas in each key
+  for (var i=9; i<18;i++){
+    var saved = JSON.parse(localStorage.getItem(entryTime));
+    
+    $(".description").text(saved);
+    console.log(saved);
+  } 
+ 
   });
 
+  // The capital H is to make it a 24hr clock for the function; therefore, the hour in local storage will be military time
   $(".time-block").each(function() {
     var color = parseInt(this.id);
     console.log(color);
-    var clock = dayjs().format('h'); 
+    var clock = dayjs().format('H'); 
     console.log(clock);
 
     if(color<clock) {
@@ -42,10 +51,3 @@ let save = document.querySelectorAll(".saveBtn")
   })
   
 
-//   //
-//   // TODO: Add code to get any user input that was saved in localStorage and set
-//   // the values of the corresponding textarea elements. HINT: How can the id
-//   // attribute of each time-block be used to do this?
-//   //
-//   // TODO: Add code to display the current date in the header of the page.
-// });
