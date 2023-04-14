@@ -20,7 +20,7 @@ var save = document.querySelectorAll(".saveBtn");
   for (var i=9; i<18;i++){
     var saved = JSON.parse(localStorage.getItem(entryTime));
     
-    $(".description").text(saved);
+    
     console.log(saved);
   } 
  

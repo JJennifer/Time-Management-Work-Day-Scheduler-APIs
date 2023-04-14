@@ -34,7 +34,8 @@ THEN the saved events persist
 
 ## Screenshot
 
-![A user clicks on slots on the color-coded calendar and edits the events.]()
+![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/jjennifer.github.io_Time-Management-Work-Day-Scheduler-APIs_.png)
 
 ## Deploy Application
 
+[Scheduler](https://jjennifer.github.io/Time-Management-Work-Day-Scheduler-APIs/)
