@@ -1,7 +1,7 @@
 # 05 Organize Your Day / Work Day scheduler 
 
 ## Description
-In this application the webpage meets accessibility standards. I added in a function to determine if the timeslots are past, present or future based off your time. It will color code each time accordingly throughout the day. In additon, anything typed in each time slot will be saved to local storage with the key being the timeslot it was written in military time. 
+In this application the webpage meets accessibility standards. I added in a function to determine if the timeslots are past, present or future based off your time. It will color code each time accordingly throughout the day. In additon, anything typed in each time slot will be saved to local storage with the key being the timeslot it was written in military time. Recieved support from a peer for line 31 (variable: color).
 
 
 ## User Story
